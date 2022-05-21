@@ -7,11 +7,11 @@ Building Your First Extensions
 1. To build a PHP extension, you must use the corresponding version of the source code.
  Example :-
 
- $ php –v    
-    PHP 7.4.3 (cli) (built: Mar  2 2022 15:36:52) ( NTS )
-   Copyright (c) The PHP Group
-   Zend Engine v3.4.0, Copyright (c) Zend Technologies
-      with Zend OPcache v7.4.3, Copyright (c), by Zend Technologies
+    $ php –v    
+      PHP 7.4.3 (cli) (built: Mar  2 2022 15:36:52) ( NTS )
+     Copyright (c) The PHP Group
+     Zend Engine v3.4.0, Copyright (c) Zend Technologies
+       with Zend OPcache v7.4.3, Copyright (c), by Zend Technologies
 
 2. Then download the PHP source code (here my version is PHP 7.4.3)
 
@@ -31,16 +31,21 @@ Building Your First Extensions
 	   config.m4	  config.w32   php_hello.h   hello.c   tests
 	
 	In the above code snippet:
-• config.m4 is an extension configuration script used by “phpize” or “buildconf” to 
-   add extension configuration options into the “configure” command.
-• config.w32 is a similar configuration file for the Windows builds system.
-• php_test.h is a C header file that contains our common extension definitions. 
-   It’s not necessary for simple extensions with a single source C file, but it’s 
-   useful in case the implementation is spread among a few files.
-• test.c is the main extension implementation source. It defines all the structures 
-   that allow to plug the extension into PHP and make all their internal functions, 
-   classes and constants to be available.
-• tests refers to the directory with PHP tests. 
+	• config.m4 is an extension configuration script used by “phpize” or “buildconf” to 
+   	add extension configuration options into the “configure” command.
+	
+	• config.w32 is a similar configuration file for the Windows builds system.
+	
+	• php_test.h is a C header file that contains our common extension definitions. 
+	
+  	 It’s not necessary for simple extensions with a single source C file, but it’s 
+   	useful in case the implementation is spread among a few files.
+	
+	• test.c is the main extension implementation source. It defines all the structures 
+   	that allow to plug the extension into PHP and make all their internal functions, 
+   	classes and constants to be available.
+	
+	• tests refers to the directory with PHP tests. 
 	
 	 This extension skeleton can be compiled without any changes
 
