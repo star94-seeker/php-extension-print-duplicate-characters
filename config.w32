@@ -1,0 +1,7 @@
+ARG_ENABLE('find_duplicates', 'find_duplicates support', 'no');
+
+if (PHP_FIND_DUPLICATES != 'no') {
+	AC_DEFINE('HAVE_FIND_DUPLICATES', 1, 'find_duplicates support enabled');
+
+	EXTENSION('find_duplicates', 'find_duplicates.c', null, '/DZEND_ENABLE_STATIC_TSRMLS_CACHE=1');
+}
